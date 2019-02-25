@@ -4,6 +4,13 @@ export default StyleSheet.create({
   wrapper: {
     backgroundColor: '#333333',
   },
+  card: {
+    flex: 0.5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: '#cccccc',
+    overflow: 'hidden',
+  },
   upperCard: {
     flex: 0.5,
     justifyContent: 'center',
@@ -32,6 +39,7 @@ export default StyleSheet.create({
     width: '100%',
     overflow: 'hidden',
     backgroundColor: '#333333',
+    borderColor: '#cccccc',
     backfaceVisibility: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
