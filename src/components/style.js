@@ -6,12 +6,20 @@ export default StyleSheet.create({
   },
   numberWrapper: {
     backgroundColor: '#333333',
+    margin: 3,
+    shadowColor: '#1f1f1f',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowRadius: 2,
+    shadowOpacity: 1,
   },
   card: {
     flex: 0.5,
     alignItems: 'center',
     justifyContent: 'center',
-    borderColor: '#cccccc',
+    borderColor: '#1f1f1f',
     overflow: 'hidden',
   },
   number: {
@@ -25,9 +33,21 @@ export default StyleSheet.create({
     width: '100%',
     overflow: 'hidden',
     backgroundColor: '#333333',
-    borderColor: '#cccccc',
+    borderColor: '#1f1f1f',
     backfaceVisibility: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  separator: {
+    marginHorizontal: 5,
+    marginVertical: 10,
+    alignItems: 'center',
+    justifyContent: 'space-around',
+  },
+  circle: {
+    height: 5,
+    width: 5,
+    borderRadius: 5,
+    backgroundColor: '#333333',
   },
 });

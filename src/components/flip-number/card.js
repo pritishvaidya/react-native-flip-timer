@@ -8,7 +8,7 @@ function Card({
   type, size, number, cardStyle, numberStyle,
 }) {
   return (
-    <View style={[style.card, type === 'upper' ? { borderBottomWidth: 1 } : { borderTopWidth: 1 }, cardStyle]}>
+    <View style={[style.card, type === 'upper' ? { borderBottomWidth: 0.5 } : { borderTopWidth: 0.5 }, cardStyle]}>
       <Text style={[style.number, {
         transform: [type === 'upper' ? { translateY: size * 0.3 } : { translateY: -size * 0.3 }],
         fontSize: size / 1.5,
@@ -29,7 +29,10 @@ Card.defaultProps = {
 Card.propTypes = {
   type: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
-  number: PropTypes.number.isRequired,
+  number: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
   cardStyle: PropTypes.object,
   numberStyle: PropTypes.object,
 };

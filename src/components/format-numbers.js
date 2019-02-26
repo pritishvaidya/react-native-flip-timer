@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import FlipNumber from './flip-number';
+import Separator from './flip-number/separator';
 
 import TransformUtils from '../utils';
 
@@ -45,7 +46,9 @@ class FormatNumbers extends React.Component {
     return (
       <View style={[style.wrapper, wrapperStyle]}>
         {!!hours && <FlipNumber number={hours} unit="hours" />}
+        <Separator />
         {!!minutes && <FlipNumber number={minutes} unit="minutes" />}
+        <Separator />
         {!!seconds && <FlipNumber number={seconds} unit="seconds" />}
       </View>
     );
