@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise, radix, no-param-reassign */
 /**
  * https://github.com/facebook/react-native/blob/master/Libraries/Utilities/MatrixMath.js
  * */
@@ -50,6 +51,42 @@ function untranslateMatrix(matrix, origin) {
   multiplyInto(matrix, matrix, unTranslate);
 }
 
+function formatTime(hours, minutes, seconds) {
+  if (hours < 10) { hours = `0${hours}`; }
+  if (minutes < 10) { minutes = `0${minutes}`; }
+  if (seconds < 10) { seconds = `0${seconds}`; }
+  return { hours, minutes, seconds };
+}
+
+function formatNumberToTime(number) {
+  const secNum = parseInt(number);
+  const hours = Math.floor(secNum / 3600);
+  const minutes = Math.floor((secNum - (hours * 3600)) / 60);
+  const seconds = secNum - (hours * 3600) - (minutes * 60);
+  return formatTime(hours, minutes, seconds);
+}
+
+function addTime(hours, minutes, seconds) {
+  hours = parseInt(hours);
+  minutes = parseInt(minutes);
+  seconds = parseInt(seconds);
+
+  seconds += 1;
+  if (seconds >= 60) {
+    const m = (seconds / 60) << 0;
+    minutes += m;
+    seconds -= 60 * m;
+  }
+
+  if (minutes >= 60) {
+    const h = (minutes / 60) << 0;
+    hours += h;
+    minutes -= 60 * h;
+  }
+  return formatTime(hours, minutes, seconds);
+}
+
+
 export default {
   createIdentityMatrix,
   multiplyInto,
@@ -57,4 +94,6 @@ export default {
   perspectiveMatrix,
   translateMatrix,
   untranslateMatrix,
+  formatNumberToTime,
+  addTime,
 };

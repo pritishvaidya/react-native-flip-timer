@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { FlipNumber } from 'react-native-flip-timer';
+import { FormatNumbers } from 'react-native-flip-timer';
 
 const styles = StyleSheet.create({
   container: {
@@ -33,7 +33,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <FlipNumber />
+        <FormatNumbers time={500} />
       </View>
     );
   }

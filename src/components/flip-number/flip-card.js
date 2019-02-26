@@ -28,9 +28,9 @@ function FlipCard({
       ]}
     >
       <Text style={[style.number, {
-        transform: [type === 'front' ? { translateY: size / 4.8 } : { translateY: -size / 3 }],
+        transform: [type === 'front' ? { translateY: size * 0.3 } : { translateY: -size * 0.3 }],
         fontSize: size / 1.5,
-        minHeight: size / 1.5,
+        lineHeight: size / 1.5,
       }, numberStyle]}
       >
         {number}
@@ -39,13 +39,18 @@ function FlipCard({
   );
 }
 
+FlipCard.defaultProps = {
+  flipCardStyle: {},
+  numberStyle: {},
+};
+
 FlipCard.propTypes = {
   setRef: PropTypes.func.isRequired,
   type: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
   number: PropTypes.number.isRequired,
-  flipCardStyle: PropTypes.object.isRequired,
-  numberStyle: PropTypes.object.isRequired,
+  flipCardStyle: PropTypes.object,
+  numberStyle: PropTypes.object,
 };
 
 export default FlipCard;

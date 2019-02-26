@@ -8,7 +8,7 @@ import TransformUtil from '../../utils';
 import FlipCard from './flip-card';
 import Card from './card';
 
-class FlipNumber extends React.PureComponent {
+class FlipNumber extends React.Component {
   constructor(props) {
     super(props);
     this.rotateFront = new Animated.Value(0);
@@ -30,6 +30,14 @@ class FlipNumber extends React.PureComponent {
     });
   }
 
+  shouldComponentUpdate(nextProps) {
+    const { number } = this.props;
+    if (nextProps.number !== number) {
+      this.animateTick();
+    }
+    return true;
+  }
+
   setFrontRef = (ref) => {
     this.frontRef = ref;
   }
@@ -39,6 +47,8 @@ class FlipNumber extends React.PureComponent {
   }
 
   animateTick = () => {
+    this.rotateFront.setValue(0);
+    this.rotateBack.setValue(-180);
     Animated.parallel([
       Animated.timing(this.rotateFront, {
         toValue: 180,
@@ -64,25 +74,33 @@ class FlipNumber extends React.PureComponent {
 
   render() {
     const {
-      size, wrapperStyle, cardStyle, flipCardStyle, numberStyle,
+      number, unit, size, numberWrapperStyle, cardStyle, flipCardStyle, numberStyle,
     } = this.props;
+    let previousNumber = number - 1;
+
+    if (unit !== 'hours') {
+      previousNumber = previousNumber === -1 ? 59 : previousNumber;
+    } else {
+      previousNumber = previousNumber === -1 ? 23 : previousNumber;
+    }
+    previousNumber = previousNumber < 10 ? `0${previousNumber}` : previousNumber;
 
     return (
-      <View style={[style.wrapper,
+      <View style={[style.numberWrapper,
         { width: size, height: size * 1.2, borderRadius: size / 10 },
-        wrapperStyle]}
+        numberWrapperStyle]}
       >
         <Card
           type="upper"
           size={size}
-          number={10}
+          number={number}
           cardStyle={cardStyle}
           numberStyle={numberStyle}
         />
         <Card
           type="lower"
           size={size}
-          number={10}
+          number={previousNumber}
           cardStyle={cardStyle}
           numberStyle={numberStyle}
         />
@@ -90,7 +108,7 @@ class FlipNumber extends React.PureComponent {
           setRef={this.setFrontRef}
           type="front"
           size={size}
-          number={10}
+          number={previousNumber}
           flipCardStyle={flipCardStyle}
           numberStyle={numberStyle}
         />
@@ -98,7 +116,7 @@ class FlipNumber extends React.PureComponent {
           setRef={this.setBackRef}
           type="back"
           size={size}
-          number={10}
+          number={number}
           flipCardStyle={flipCardStyle}
           numberStyle={numberStyle}
         />
@@ -108,16 +126,17 @@ class FlipNumber extends React.PureComponent {
 }
 
 FlipNumber.defaultProps = {
-  size: 200,
-  wrapperStyle: {},
-  cardStyle: {},
-  flipCardStyle: {},
-  numberStyle: {},
+  size: 60,
 };
 
 FlipNumber.propTypes = {
+  number: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
+  unit: PropTypes.string.isRequired,
   size: PropTypes.number,
-  wrapperStyle: PropTypes.object,
+  numberWrapperStyle: PropTypes.object,
   cardStyle: PropTypes.object,
   flipCardStyle: PropTypes.object,
   numberStyle: PropTypes.object,
