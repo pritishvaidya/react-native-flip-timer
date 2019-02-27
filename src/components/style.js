@@ -14,12 +14,16 @@ export default StyleSheet.create({
     },
     shadowRadius: 2,
     shadowOpacity: 1,
+    elevation: 5,
   },
   card: {
     flex: 0.5,
     alignItems: 'center',
     justifyContent: 'center',
     borderColor: '#1f1f1f',
+    overflow: 'hidden',
+  },
+  overflowContainer: {
     overflow: 'hidden',
   },
   number: {
@@ -31,7 +35,6 @@ export default StyleSheet.create({
     left: 0,
     height: '50%',
     width: '100%',
-    overflow: 'hidden',
     backgroundColor: '#333333',
     borderColor: '#1f1f1f',
     backfaceVisibility: 'hidden',

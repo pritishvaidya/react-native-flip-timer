@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated, Text } from 'react-native';
+import { Animated, View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 import style from '../style';
@@ -27,14 +27,16 @@ function FlipCard({
         flipCardStyle,
       ]}
     >
-      <Text style={[style.number, {
-        transform: [type === 'front' ? { translateY: size * 0.3 } : { translateY: -size * 0.3 }],
-        fontSize: size / 1.5,
-        lineHeight: size / 1.5,
-      }, numberStyle]}
-      >
-        {number}
-      </Text>
+      <View style={style.overflowContainer}>
+        <Text style={[style.number, {
+          transform: [type === 'front' ? { translateY: size * 0.3 } : { translateY: -size * 0.3 }],
+          fontSize: size / 1.5,
+          lineHeight: size / 1.5,
+        }, numberStyle]}
+        >
+          {number}
+        </Text>
+      </View>
     </Animated.View>
   );
 }

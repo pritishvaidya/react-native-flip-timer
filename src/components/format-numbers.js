@@ -30,6 +30,21 @@ class FormatNumbers extends React.Component {
     );
   }
 
+  shouldComponentUpdate(nextProps) {
+    const { play } = this.props;
+    if (nextProps.play !== play) {
+      if (nextProps.play) {
+        this.timer = setInterval(
+          () => this.updateTime(),
+          1000,
+        );
+      } else {
+        clearInterval(this.timer);
+      }
+    }
+    return true;
+  }
+
   componentWillUnmount() {
     clearInterval(this.timer);
   }

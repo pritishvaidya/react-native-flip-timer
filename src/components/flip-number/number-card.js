@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Animated } from 'react-native';
+import { View, Animated, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 
 import style from '../style';
@@ -7,6 +7,8 @@ import style from '../style';
 import TransformUtil from '../../utils';
 import FlipCard from './flip-card';
 import Card from './card';
+
+const { width } = Dimensions.get('window');
 
 class NumberCard extends React.Component {
   constructor(props) {
@@ -53,10 +55,12 @@ class NumberCard extends React.Component {
       Animated.timing(this.rotateFront, {
         toValue: 180,
         duration: 800,
+        useNativeDriver: true,
       }),
       Animated.timing(this.rotateBack, {
         toValue: 0,
         duration: 800,
+        useNativeDriver: true,
       }),
     ]).start();
   }
@@ -118,7 +122,7 @@ class NumberCard extends React.Component {
 }
 
 NumberCard.defaultProps = {
-  size: 60,
+  size: width / 6,
   perspective: 250,
 };
 
