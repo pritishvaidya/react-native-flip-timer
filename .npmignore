@@ -1,6 +1,6 @@
 .idea
 node_modules
-dist
+_tests_
 .DS_Store
 .vscode
 *.log

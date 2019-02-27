@@ -4529,8 +4529,10 @@ react-is@^16.6.3, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
 
-"react-native-flip-timer@file:.yalc/react-native-flip-timer":
-  version "0.0.1-1f7d15d6"
+react-native-flip-timer@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-flip-timer/-/react-native-flip-timer-0.0.1.tgz#087fdcd1ea03172d82981d600a704ba3c6adcea4"
+  integrity sha512-4cWsrTtv1vzBfBofTnzUN5NquoezFgOczV1/w8WMV0QfBWRmvWvwie8f7UZ4CrVyKr89aN6PfztcwadbtMVggA==
 
 react-native@0.58.5:
   version "0.58.5"

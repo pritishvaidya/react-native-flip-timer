@@ -18,8 +18,7 @@
     "yalc": "npm run build && yalc push"
   },
   "files": [
-    "dist",
-    "data"
+    "dist"
   ],
   "keywords": [
     "react-native",
@@ -87,9 +86,6 @@
     },
     "modulePathIgnorePatterns": [
       "<rootDir>/example/"
-    ],
-    "setupFiles": [
-      "<rootDir>/global-mocks.js"
     ]
   },
   "lint-staged": {

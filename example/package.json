@@ -10,7 +10,7 @@
   "dependencies": {
     "react": "16.6.3",
     "react-native": "0.58.5",
-    "react-native-flip-timer": "file:.yalc/react-native-flip-timer"
+    "react-native-flip-timer": "*"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",
