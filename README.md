@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
 | time | required | `string / number` | Time (in seconds) |
 | play | true | bool | Play the timer |
 | wrapperStyle | `{}` | object | Wrapper for the Timer |
+| flipNumberProps | [`{...}`](#flip-number-props) | `defaults` | Flip Number Props |
 
 #### Flip Number Props
 | Prop  | Default  | Type | Description |
