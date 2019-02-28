@@ -42,7 +42,7 @@ export default class App extends Component {
     const { play } = this.state;
     return (
       <View style={styles.container}>
-        <FormatNumbers time={500} play={play} />
+        <Timer time={500} play={play} />
         <TouchableOpacity style={styles.button} onPress={this.play}>
           <Text style={styles.text}>{play ? 'Pause' : 'Play'}</Text>
         </TouchableOpacity>
@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
 
 ## Todos
 - Full Coverage Tests for the Components
+- Support for Labels
 
 ## Contribution
 
