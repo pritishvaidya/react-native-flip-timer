@@ -1,6 +1,6 @@
 {
   "name": "react-native-flip-timer",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A Flip timer implementation in React Native",
   "main": "dist/react-native-flip-timer.cjs.js",
   "jsnext:main": "dist/react-native-flip-timer.esm.js",

@@ -56,15 +56,15 @@ class Timer extends React.Component {
   }
 
   render() {
-    const { wrapperStyle } = this.props;
+    const { wrapperStyle, flipNumberProps } = this.props;
     const { hours, minutes, seconds } = this.state;
     return (
       <View style={[style.wrapper, wrapperStyle]}>
-        {!!hours && <FlipNumber number={hours} unit="hours" />}
+        {!!hours && <FlipNumber number={hours} unit="hours" {...flipNumberProps} />}
         <Separator />
-        {!!minutes && <FlipNumber number={minutes} unit="minutes" />}
+        {!!minutes && <FlipNumber number={minutes} unit="minutes" {...flipNumberProps} />}
         <Separator />
-        {!!seconds && <FlipNumber number={seconds} unit="seconds" />}
+        {!!seconds && <FlipNumber number={seconds} unit="seconds" {...flipNumberProps} />}
       </View>
     );
   }
@@ -82,6 +82,14 @@ Timer.propTypes = {
   ]).isRequired,
   play: PropTypes.bool,
   wrapperStyle: PropTypes.object,
+  flipNumberProps: PropTypes.shape({
+    size: PropTypes.number,
+    perspective: PropTypes.number,
+    numberWrapperStyle: PropTypes.object,
+    cardStyle: PropTypes.object,
+    flipCardStyle: PropTypes.object,
+    numberStyle: PropTypes.object,
+  }),
 };
 
 export default Timer;
