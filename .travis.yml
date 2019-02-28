@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- 10
+- 8
+script: npm run test:coverage
+before_script:
+- npm install codeclimate-test-reporter -g
+after_script:
+- codeclimate-test-reporter < ./coverage/lcov.info
+notifications:
+  email:
+    recipients:
+    - pritishvaidya94@gmail.com
+    on_success: never
+    on_failure: always
