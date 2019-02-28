@@ -1,13 +1,13 @@
 /* eslint-disable react/forbid-foreign-prop-types */
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-import { FlipNumber, FormatNumbers } from '../src';
+import { FlipNumber, Timer } from '../src';
 
 jest.useFakeTimers();
 
 describe('Testing Components', () => {
   describe('FormatNumbers Component details', () => {
-    const componentTestRenderer = TestRenderer.create(<FormatNumbers
+    const componentTestRenderer = TestRenderer.create(<Timer
       time={1000}
     />);
     const wrapper = componentTestRenderer.toJSON();

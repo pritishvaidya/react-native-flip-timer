@@ -9,7 +9,7 @@ import TransformUtils from '../utils';
 
 import style from './style';
 
-class FormatNumbers extends React.Component {
+class Timer extends React.Component {
   state = {
     hours: 0,
     minutes: 0,
@@ -70,12 +70,12 @@ class FormatNumbers extends React.Component {
   }
 }
 
-FormatNumbers.defaultProps = {
+Timer.defaultProps = {
   play: true,
   wrapperStyle: {},
 };
 
-FormatNumbers.propTypes = {
+Timer.propTypes = {
   time: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
@@ -84,4 +84,4 @@ FormatNumbers.propTypes = {
   wrapperStyle: PropTypes.object,
 };
 
-export default FormatNumbers;
+export default Timer;
