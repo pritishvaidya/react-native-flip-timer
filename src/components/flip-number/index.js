@@ -8,7 +8,7 @@ import NumberCard from './number-card';
 import style from '../style';
 
 function FlipNumber({
-  number, unit, size, perspective, cardStyle, flipCardStyle, numberStyle,
+  number, unit, size, perspective, numberWrapperStyle, cardStyle, flipCardStyle, numberStyle,
 }) {
   number = parseInt(number);
   let previousNumber = number - 1;
@@ -30,6 +30,7 @@ function FlipNumber({
         previousNumber={previousNumberSplit[0]}
         size={size}
         perspective={perspective}
+        numberWrapperStyle={numberWrapperStyle}
         cardStyle={cardStyle}
         flipCardStyle={flipCardStyle}
         numberStyle={numberStyle}
@@ -39,6 +40,7 @@ function FlipNumber({
         previousNumber={previousNumberSplit[1]}
         size={size}
         perspective={perspective}
+        numberWrapperStyle={numberWrapperStyle}
         cardStyle={cardStyle}
         flipCardStyle={flipCardStyle}
         numberStyle={numberStyle}
@@ -59,6 +61,7 @@ FlipNumber.propTypes = {
   unit: PropTypes.oneOf(['hours', 'minutes', 'seconds']),
   size: PropTypes.number,
   perspective: PropTypes.number,
+  numberWrapperStyle: PropTypes.object,
   cardStyle: PropTypes.object,
   flipCardStyle: PropTypes.object,
   numberStyle: PropTypes.object,
