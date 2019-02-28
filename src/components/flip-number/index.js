@@ -47,12 +47,16 @@ function FlipNumber({
   );
 }
 
+FlipNumber.defaultProps = {
+  unit: 'seconds',
+};
+
 FlipNumber.propTypes = {
   number: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
   ]).isRequired,
-  unit: PropTypes.oneOf(['hours', 'minutes', 'seconds']).isRequired,
+  unit: PropTypes.oneOf(['hours', 'minutes', 'seconds']),
   size: PropTypes.number,
   perspective: PropTypes.number,
   cardStyle: PropTypes.object,
