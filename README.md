@@ -27,7 +27,7 @@ import React, { Component } from 'react';
 import {
   StyleSheet, View, TouchableOpacity, Text,
 } from 'react-native';
-import { FormatNumbers, FlipNumber } from 'react-native-flip-timer';
+import { Timer, FlipNumber } from 'react-native-flip-timer';
 
 export default class App extends Component {
   state = {
