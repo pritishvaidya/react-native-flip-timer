@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
 | :------------ |---------------:| :---------------| :-----|
 | number | required | `string / number` | Number Input |
 | unit | `seconds` | `hours / minutes / seconds` | Number Input Unit |
+| size | `number` | `deviceWidth / 6` | Size of the card |
 | perspective | `250` | number | Perspective |
 | numberWrapperStyle | `{}` | object | Wrapper Style |
 | cardStyle | `{}` | object | Card Style |
