@@ -17,17 +17,20 @@ class Timer extends React.Component {
   }
 
   componentDidMount() {
-    const { time } = this.props;
+    const { time, play } = this.props;
     const { hours, minutes, seconds } = TransformUtils.formatNumberToTime(time);
     this.setState({
       hours,
       minutes,
       seconds,
+    }, () => {
+      if (play) {
+        this.timer = setInterval(
+          () => this.updateTime(),
+          1000,
+        );
+      }
     });
-    this.timer = setInterval(
-      () => this.updateTime(),
-      1000,
-    );
   }
 
   shouldComponentUpdate(nextProps) {
