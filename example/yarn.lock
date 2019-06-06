@@ -3118,9 +3118,9 @@ jest@24.1.0:
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
 js-yaml@^3.12.0, js-yaml@^3.9.0:
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.1.tgz#295c8632a18a23e054cf5c9d3cecafe678167600"
-  integrity sha512-um46hB9wNOKlwkHgiuyEVAybXBjwFUV0Z/RaHJblRd9DXltue9FTYvzCr9ErQrK9Adz5MU4gHWVaNUfdmrC8qA==
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
+  integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -4529,10 +4529,10 @@ react-is@^16.6.3, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
 
-react-native-flip-timer@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-flip-timer/-/react-native-flip-timer-0.0.1.tgz#087fdcd1ea03172d82981d600a704ba3c6adcea4"
-  integrity sha512-4cWsrTtv1vzBfBofTnzUN5NquoezFgOczV1/w8WMV0QfBWRmvWvwie8f7UZ4CrVyKr89aN6PfztcwadbtMVggA==
+react-native-flip-timer@*:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-flip-timer/-/react-native-flip-timer-0.0.4.tgz#84372d53e9b558cf5819a4be12a963b26b15a17f"
+  integrity sha512-B66rH9Qp08vmSUBe9r19p4S/tTu3cF7vRegfbbwF3+Nxdza66eak2q2aqRXvBNIUE0cMCrJna5GYdnUFZ9Q9og==
 
 react-native@0.58.5:
   version "0.58.5"
