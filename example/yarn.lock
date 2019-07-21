@@ -3368,9 +3368,9 @@ lodash.throttle@^4.1.1:
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
 lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
+  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
@@ -4529,10 +4529,10 @@ react-is@^16.6.3, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
 
-react-native-flip-timer@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-flip-timer/-/react-native-flip-timer-0.0.1.tgz#087fdcd1ea03172d82981d600a704ba3c6adcea4"
-  integrity sha512-4cWsrTtv1vzBfBofTnzUN5NquoezFgOczV1/w8WMV0QfBWRmvWvwie8f7UZ4CrVyKr89aN6PfztcwadbtMVggA==
+react-native-flip-timer@*:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-flip-timer/-/react-native-flip-timer-0.0.4.tgz#84372d53e9b558cf5819a4be12a963b26b15a17f"
+  integrity sha512-B66rH9Qp08vmSUBe9r19p4S/tTu3cF7vRegfbbwF3+Nxdza66eak2q2aqRXvBNIUE0cMCrJna5GYdnUFZ9Q9og==
 
 react-native@0.58.5:
   version "0.58.5"
